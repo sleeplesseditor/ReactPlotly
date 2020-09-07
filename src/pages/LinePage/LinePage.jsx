@@ -4,8 +4,8 @@ import BasicLineGraph from '../../components/Graphs/Basic/BasicLineGraph';
 
 const LinePage = () => {
     return (
-        <div>
-            Line Page
+        <div className="page-container">
+            <h2>Basic Line Graph</h2>
             <BasicLineGraph />
         </div>
     )
