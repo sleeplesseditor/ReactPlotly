@@ -4,7 +4,7 @@ import LazyLoader from './components/LazyLoader/LazyLoader';
 import './App.scss';
 import Header from './components/Header/Header';
 
-const LinePage = React.lazy(() => import('./pages/LinePage'));
+const LinePage = React.lazy(() => import('./pages/LinePage/LinePage'));
 
 function App() {
   return (
