@@ -13,8 +13,8 @@ code {
 }
 
 :root {
-  --bg: #242526;
-  --bg-accent: #484a4d;
-  --text-color: #dadce1;
+  --bg: #fff;
+  --bg-accent: rgba(0,0,0,0.2);
+  --text-color: #000;
   --nav-size: 60px;
 }
