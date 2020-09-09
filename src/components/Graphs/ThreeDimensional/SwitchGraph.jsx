@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
+import { ToggleButton } from '../../Toggle/Toggle';
+import './SwitchGraph.scss';
 
 const SwitchGraph = () => {
     const [dim3d, setDim3d] = useState(false);
@@ -40,18 +42,19 @@ const SwitchGraph = () => {
     }
 
     return (
-        <div>
+        <div className="graph-container">
             <Plot 
                 data={[newData]}
                 layout={layout}
                 revision={revision}
             />
-            <div>
-                Show 3D?
-                <input 
-                    type="checkbox" 
-                    checked={dim3d} 
-                    onChange={() => {setDim3d(!dim3d); revision++ }}
+            <div className="graph-container-btn">
+                <ToggleButton
+                    label={'Show 3D'}
+                    selected={dim3d}
+                    toggleSelected={() => {
+                        {setDim3d(!dim3d); revision++ };
+                    }}
                 />
             </div>
         </div>
