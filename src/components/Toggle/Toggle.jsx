@@ -3,12 +3,12 @@ import React from "react";
 
 import "./Toggle.scss";
 
-export const ToggleButton = ({ label, selected, toggleSelected }) => {
+export const ToggleButton = ({ disabled, label, selected, toggleSelected }) => {
     return (
         <div className="toggle-wrapper">
             <label className="toggle-label" for="dialog-button">{label}</label>
-            <div className={`toggle-container ${selected ? "" : "disabled"}`} onClick={toggleSelected}>
-                <div className={`dialog-button ${selected ? "" : "disabled"}`} />
+            <div className={`toggle-container ${selected ? "" : "disabled"}`} onClick={!disabled && toggleSelected}>
+                <div className={`dialog-button ${selected ? "" : "off"}`} />
             </div>
         </div>
     );

@@ -53,7 +53,7 @@ const SwitchGraph = () => {
                     label={'Show 3D'}
                     selected={dim3d}
                     toggleSelected={() => {
-                        {setDim3d(!dim3d); revision++ };
+                        setDim3d(!dim3d); revision++;
                     }}
                 />
             </div>
