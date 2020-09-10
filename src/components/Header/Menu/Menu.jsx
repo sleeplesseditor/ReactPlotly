@@ -3,6 +3,7 @@ import { ReactComponent as ArrowIcon } from './Icons/arrow.svg';
 import { ReactComponent as BasicIcon } from './Icons/basic.svg';
 import { ReactComponent as CubeIcon } from './Icons/cube.svg';
 import { ReactComponent as CaretIcon } from './Icons/caret.svg';
+import { ReactComponent as MountainIcon } from './Icons/mountains.svg';
 import { ReactComponent as SwitchIcon } from './Icons/switch.svg';
 import { CSSTransition } from 'react-transition-group';
 import './Menu.scss';
@@ -100,9 +101,7 @@ function AnimatedHeader() {
             <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
               <h3>Basic</h3>
             </DropdownItem>
-            <DropdownItem leftIcon="📈" subMenu="/">
-                Line Graph
-            </DropdownItem>
+            <DropdownItem leftIcon="📈" subMenu="/">Line Graph</DropdownItem>
           </div>
         </CSSTransition>
   
@@ -117,6 +116,7 @@ function AnimatedHeader() {
               <h3>3D</h3>
             </DropdownItem>
             <DropdownItem leftIcon={<SwitchIcon />} subMenu="/switch-graph">Switch Graph</DropdownItem>
+            <DropdownItem leftIcon={<MountainIcon />} subMenu="/surface-plot">Surface Plot Graph</DropdownItem>
           </div>
         </CSSTransition>
       </div>
