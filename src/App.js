@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LazyLoader from './components/LazyLoader/LazyLoader';
 import './App.scss';
-import Menu from './components/Header/Menu/Menu';
+import Menu from './components/Menu/Menu';
 
 const LinePage = React.lazy(() => import('./pages/LinePage/LinePage'));
 const SwitchGraphPage = React.lazy(() => import('./pages/SwitchGraphPage/SwitchGraphPage'));

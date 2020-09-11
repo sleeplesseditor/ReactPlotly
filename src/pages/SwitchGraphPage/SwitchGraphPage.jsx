@@ -5,7 +5,7 @@ import SwitchGraph from '../../components/Graphs/ThreeDimensional/SwitchGraph';
 const SwitchGraphPage = () => {
     return (
         <div className="page-container">
-            <h2>Switch Graph</h2>
+            <h2 className="page-continer-heading">Switch Graph</h2>
             <SwitchGraph />
         </div>
     )
