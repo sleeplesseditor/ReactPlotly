@@ -15,6 +15,13 @@ describe('Menu', function() {
         cy.get('.dropdown').should('have.length', 0);
     });
 
+    it('should close the menu when clicking outside the menu', function() {
+        cy.get('.nav-item').click()
+        cy.get('.dropdown').should('have.length', 1);
+        cy.get('.navbar-heading').click()
+        cy.get('.dropdown').should('have.length', 0);
+    });
+
     it('should render an SVG icon next to each menu option', function() {
         cy.get('.nav-item').click()
         cy.get('.icon-button').should('have.length', 3)
