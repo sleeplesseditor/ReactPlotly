@@ -9,29 +9,20 @@ import { CSSTransition } from 'react-transition-group';
 import './Menu.scss';
 
 function AnimatedHeader() {
-    return (
-      <Navbar>
-        <NavItem icon={<CaretIcon />}>
-          <DropdownMenu></DropdownMenu>
-        </NavItem>
-      </Navbar>
-    );
-  }
+  const [open, setOpen] = useState(false);
   
   function Navbar(props) {
     return (
       <nav className="navbar">
         <h3 className='navbar-heading' data-testid='navbar-main'>
-            React Plotly
+          React Plotly
         </h3>
         <ul className="navbar-nav">{props.children}</ul>
       </nav>
     );
   }
   
-  function NavItem(props) {
-    const [open, setOpen] = useState(false);
-  
+  function NavItem(props) {  
     return (
       <li className="nav-item">
         <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
@@ -42,11 +33,27 @@ function AnimatedHeader() {
       </li>
     );
   }
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+              setOpen(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [ref]);
+}
   
   function DropdownMenu() {
     const [activeMenu, setActiveMenu] = useState('main');
     const [menuHeight, setMenuHeight] = useState(null);
     const dropdownRef = useRef(null);
+    useOutsideAlerter(dropdownRef);
   
     useEffect(() => {
       setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
@@ -122,5 +129,14 @@ function AnimatedHeader() {
       </div>
     );
   }
+
+  return (
+    <Navbar>
+      <NavItem icon={<CaretIcon />}>
+        <DropdownMenu></DropdownMenu>
+      </NavItem>
+    </Navbar>
+  );
+}
   
 export default AnimatedHeader;
