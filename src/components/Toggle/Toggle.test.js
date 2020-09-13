@@ -7,7 +7,7 @@ const mockCallBack = jest.fn();
 let buttonComponent;
 
 beforeEach(() => {
-    buttonComponent = shallow((<ToggleButton toggleSelected={mockCallBack} />))
+    buttonComponent = shallow((<ToggleButton toggleSelected={mockCallBack} label={'Demo Toggle'} />))
 })
 
 describe('ToggleButton', () => {
@@ -24,5 +24,10 @@ describe('ToggleButton', () => {
         const disabledbuttonComponent = shallow((<ToggleButton toggleSelected={mockCallBack} disabled />))
         const buttonProps = disabledbuttonComponent.props().children[1].props.children[0].props;
         expect(buttonProps.disabled).toBe(true);
+    });
+
+    it('displays a label when passed the label prop', () => {
+        const buttonProps = buttonComponent.props().children[0].props.children;
+        expect(buttonProps).toBe('Demo Toggle');
     });
 });

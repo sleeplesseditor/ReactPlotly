@@ -1,0 +1,15 @@
+{
+	"menuTitle": "3D",
+	"menuLinks": [
+        {
+			"title": "Switch Graph",
+			"icon": "switch",
+			"link": "/switch-graph"
+		},
+		{
+			"title": "Surface Plot Graph",
+			"icon": "mountain",
+			"link": "/surface-plot"
+		}
+	]
+}

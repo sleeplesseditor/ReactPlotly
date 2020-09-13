@@ -1,0 +1,14 @@
+{
+	"menuTitles": [
+        {
+			"title": "Basic",
+			"icon": "basicIcon",
+			"link": "basic"
+		},
+		{
+			"title": "3D",
+			"icon": "cubeIcon",
+			"link": "3d"
+		}
+	]
+}
