@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { ReactComponent as ArrowIcon } from './Icons/arrow.svg';
+import { IconSelector } from './Icons/IconSelector';
 
 function useOutsideAlerter(ref, openView) {
     useEffect(() => {
@@ -39,7 +39,7 @@ const PrimaryMenu = ({ activeMenuProp, calcHeight, menuData: { menuTitles }, set
             >
                 <div className="menu">
                     {menuTitles.map(link => (
-                        <DropdownItem setActiveMenu={setActiveMenu} goToMenu={link.link}>{link.title}</DropdownItem>
+                        <DropdownItem leftIcon={IconSelector(link.icon)} setActiveMenu={setActiveMenu} goToMenu={link.link}>{link.title}</DropdownItem>
                     ))}
                 </div>
             </CSSTransition>
@@ -49,7 +49,7 @@ const PrimaryMenu = ({ activeMenuProp, calcHeight, menuData: { menuTitles }, set
     }
 };
 
-const SecondaryMenu = ({ activeMenuProp, calcHeight, goToMenu, menuData: { menuTitle, menuLinks}, setActiveMenu }) => {
+const SecondaryMenu = ({ activeMenuProp, calcHeight, goToMenu, menuData: { backIcon, menuTitle, menuLinks}, setActiveMenu }) => {
     if (menuTitle && menuLinks) {
         return (
             <CSSTransition
@@ -60,13 +60,11 @@ const SecondaryMenu = ({ activeMenuProp, calcHeight, goToMenu, menuData: { menuT
                 onEnter={calcHeight}
             >
                 <div className="menu">
-                    <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />} setActiveMenu={setActiveMenu} >
-                    <h3>{menuTitle}</h3>
+                    <DropdownItem goToMenu="main" leftIcon={IconSelector(backIcon)} setActiveMenu={setActiveMenu} >
+                        <h3>{menuTitle}</h3>
                     </DropdownItem>
-                    {/* <DropdownItem leftIcon={<SwitchIcon />} subMenu="/switch-graph">Switch Graph</DropdownItem>
-                    <DropdownItem leftIcon={<MountainIcon />} subMenu="/surface-plot">Surface Plot Graph</DropdownItem> */}
                     {menuLinks.map(link => (
-                        <DropdownItem subMenu={link.link}>{link.title}</DropdownItem>
+                        <DropdownItem leftIcon={IconSelector(link.icon)} subMenu={link.link}>{link.title}</DropdownItem>
                     ))}
                 </div>
             </CSSTransition>

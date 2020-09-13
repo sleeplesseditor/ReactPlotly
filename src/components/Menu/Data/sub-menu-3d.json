@@ -1,14 +1,15 @@
 {
+	"backIcon": "arrowIcon",
 	"menuTitle": "3D",
 	"menuLinks": [
         {
 			"title": "Switch Graph",
-			"icon": "switch",
+			"icon": "switchIcon",
 			"link": "/switch-graph"
 		},
 		{
 			"title": "Surface Plot Graph",
-			"icon": "mountain",
+			"icon": "mountainIcon",
 			"link": "/surface-plot"
 		}
 	]

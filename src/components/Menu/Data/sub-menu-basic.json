@@ -1,9 +1,10 @@
 {
+	"backIcon": "arrowIcon",
 	"menuTitle": "Basic",
 	"menuLinks": [
         {
 			"title": "Line Graph",
-			"icon": "linegraph",
+			"icon": "lineIcon",
 			"link": "/"
 		}
 	]

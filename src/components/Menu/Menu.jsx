@@ -69,7 +69,7 @@ function AnimatedHeader({ navIcon, title }) {
           goToMenu
           setActiveMenu={setActiveMenu}
         />
-        </div>
+      </div>
     );
   }
 
