@@ -6,7 +6,7 @@ import MainMenuData from './Data/main-menu.json';
 import SubMenuData3D from './Data/sub-menu-3d.json';
 import SubMenuBasic from './Data/sub-menu-basic.json';
 
-function AnimatedHeader({ navIcon, title }) {
+function Menu({ navIcon, title }) {
   const [open, setOpen] = useState(false);
   
   function Navbar({ children, title }) {
@@ -52,21 +52,18 @@ function AnimatedHeader({ navIcon, title }) {
           activeMenuProp={activeMenu === 'main'}
           calcHeight={calcHeight}
           menuData={MainMenuData}
-          goToMenu
           setActiveMenu={setActiveMenu}
         /> 
         <SecondaryMenu
           activeMenuProp={activeMenu === 'basic'}
           calcHeight={calcHeight}
           menuData={SubMenuBasic}
-          goToMenu
           setActiveMenu={setActiveMenu}
         />
         <SecondaryMenu
           activeMenuProp={activeMenu === '3d'}
           calcHeight={calcHeight}
           menuData={SubMenuData3D}
-          goToMenu
           setActiveMenu={setActiveMenu}
         />
       </div>
@@ -82,4 +79,4 @@ function AnimatedHeader({ navIcon, title }) {
   );
 }
   
-export default AnimatedHeader;
+export default Menu;

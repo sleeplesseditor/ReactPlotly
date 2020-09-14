@@ -27,7 +27,12 @@ function DropdownItem({ children, goToMenu, leftIcon, rightIcon, setActiveMenu, 
     );
 }
 
-const PrimaryMenu = ({ activeMenuProp, calcHeight, menuData: { menuTitles }, setActiveMenu }) => {
+const PrimaryMenu = ({
+    activeMenuProp,
+    calcHeight,
+    menuData: { menuTitles },
+    setActiveMenu
+}) => {
     if (menuTitles) {
         return (
             <CSSTransition
@@ -39,7 +44,13 @@ const PrimaryMenu = ({ activeMenuProp, calcHeight, menuData: { menuTitles }, set
             >
                 <div className="menu">
                     {menuTitles.map(link => (
-                        <DropdownItem leftIcon={IconSelector(link.icon)} setActiveMenu={setActiveMenu} goToMenu={link.link}>{link.title}</DropdownItem>
+                        <DropdownItem 
+                            leftIcon={IconSelector(link.icon)} 
+                            setActiveMenu={setActiveMenu} 
+                            goToMenu={link.link}
+                        >
+                            {link.title}
+                        </DropdownItem>
                     ))}
                 </div>
             </CSSTransition>
@@ -49,7 +60,16 @@ const PrimaryMenu = ({ activeMenuProp, calcHeight, menuData: { menuTitles }, set
     }
 };
 
-const SecondaryMenu = ({ activeMenuProp, calcHeight, goToMenu, menuData: { backIcon, menuTitle, menuLinks}, setActiveMenu }) => {
+const SecondaryMenu = ({
+    activeMenuProp,
+    calcHeight,
+    menuData: {
+        backIcon,
+        menuTitle,
+        menuLinks
+    }, 
+    setActiveMenu
+}) => {
     if (menuTitle && menuLinks) {
         return (
             <CSSTransition
@@ -60,11 +80,20 @@ const SecondaryMenu = ({ activeMenuProp, calcHeight, goToMenu, menuData: { backI
                 onEnter={calcHeight}
             >
                 <div className="menu">
-                    <DropdownItem goToMenu="main" leftIcon={IconSelector(backIcon)} setActiveMenu={setActiveMenu} >
+                    <DropdownItem 
+                        goToMenu="main" 
+                        leftIcon={IconSelector(backIcon)} 
+                        setActiveMenu={setActiveMenu} 
+                    >
                         <h3>{menuTitle}</h3>
                     </DropdownItem>
                     {menuLinks.map(link => (
-                        <DropdownItem leftIcon={IconSelector(link.icon)} subMenu={link.link}>{link.title}</DropdownItem>
+                        <DropdownItem 
+                            leftIcon={IconSelector(link.icon)} 
+                            subMenu={link.link}
+                        >
+                            {link.title}
+                        </DropdownItem>
                     ))}
                 </div>
             </CSSTransition>
