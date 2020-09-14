@@ -9,6 +9,11 @@
 			"title": "3D",
 			"icon": "cubeIcon",
 			"link": "3d"
+		},
+		{
+			"title": "Maps",
+			"icon": "globeIcon",
+			"link": "maps"
 		}
 	]
 }

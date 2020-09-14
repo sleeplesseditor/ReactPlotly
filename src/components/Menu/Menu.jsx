@@ -5,6 +5,7 @@ import './Menu.scss';
 import MainMenuData from './Data/main-menu.json';
 import SubMenuData3D from './Data/sub-menu-3d.json';
 import SubMenuBasic from './Data/sub-menu-basic.json';
+import SubMenuMaps from './Data/sub-menu-maps.json';
 
 function Menu({ navIcon, title }) {
   const [open, setOpen] = useState(false);
@@ -64,6 +65,12 @@ function Menu({ navIcon, title }) {
           activeMenuProp={activeMenu === '3d'}
           calcHeight={calcHeight}
           menuData={SubMenuData3D}
+          setActiveMenu={setActiveMenu}
+        />
+        <SecondaryMenu
+          activeMenuProp={activeMenu === 'maps'}
+          calcHeight={calcHeight}
+          menuData={SubMenuMaps}
           setActiveMenu={setActiveMenu}
         />
       </div>

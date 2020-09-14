@@ -1,0 +1,11 @@
+{
+	"backIcon": "arrowIcon",
+	"menuTitle": "Maps",
+	"menuLinks": [
+        {
+			"title": "Gapminder map",
+			"icon": "mapIcon",
+			"link": "/gapminder-map"
+		}
+	]
+}
