@@ -3,8 +3,8 @@
 	"menuTitle": "Maps",
 	"menuLinks": [
         {
-			"title": "Gapminder map",
-			"icon": "mapIcon",
+			"title": "GDP Choropleth",
+			"icon": "globalisation",
 			"link": "/gapminder-map"
 		}
 	]

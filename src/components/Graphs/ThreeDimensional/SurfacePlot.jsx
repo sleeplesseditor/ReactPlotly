@@ -6,12 +6,13 @@ const SurfacePlot = () => {
     const [plotData, setPlotData] = useState([])
     let i = 0;
 
-    const dataFetch = () => { Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
+    const dataFetch = () => { 
+        Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
         function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
         }
 
-        for(i=0; i<24;i++) {
+        for(i=0; i<24; i++) {
             setPlotData(unpack(rows,i));
         }
     })};

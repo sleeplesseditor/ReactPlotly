@@ -4,6 +4,7 @@ import { IconNames } from './iconNames';
 import { ReactComponent as ArrowIcon } from './arrow.svg';
 import { ReactComponent as BasicIcon } from './basic.svg';
 import { ReactComponent as CubeIcon } from './cube.svg';
+import { ReactComponent as GlobalisationIcon } from './globalisation.svg';
 import { ReactComponent as GlobeIcon } from './globeIcon.svg';
 import { ReactComponent as LineIcon } from './lineGraph.svg';
 import { ReactComponent as MapIcon } from './mapIcon.svg';
@@ -19,6 +20,8 @@ const getIcon = (icon) => {
             return <BasicIcon/>;
         case IconNames.cubeIcon:
             return <CubeIcon/>;
+        case IconNames.globalisation:
+            return <GlobalisationIcon/>;
         case IconNames.globeIcon:
             return <GlobeIcon/>;
         case IconNames.lineIcon:

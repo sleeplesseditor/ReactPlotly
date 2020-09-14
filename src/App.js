@@ -8,7 +8,7 @@ import { ReactComponent as CaretIcon } from './components/Menu/Icons/caret.svg';
 const LinePage = React.lazy(() => import('./pages/LinePage/LinePage'));
 const SwitchGraphPage = React.lazy(() => import('./pages/SwitchGraphPage/SwitchGraphPage'));
 const SurfacePlotPage = React.lazy(() => import('./pages/SurfacePlotPage/SurfacePlotPage'));
-const GapMinderMapPage = React.lazy(() => import('./pages/GapMinderMapPage/GapMinderMapPage'));
+const GDPChoroplethMapPage = React.lazy(() => import('./pages/GDPChoroplethMapPage/GDPChoroplethMapPage'));
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/" component={LazyLoader(LinePage)} />
         <Route exact path="/switch-graph" component={LazyLoader(SwitchGraphPage)} />
         <Route exact path="/surface-plot" component={LazyLoader(SurfacePlotPage)} />
-        <Route exact path="/gapminder-map" component={LazyLoader(GapMinderMapPage)} />
+        <Route exact path="/gapminder-map" component={LazyLoader(GDPChoroplethMapPage)} />
       </Switch>
     </Router>
   );
