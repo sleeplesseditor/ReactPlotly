@@ -15,5 +15,48 @@
 			"icon": "globeIcon",
 			"link": "maps"
 		}
-	]
+    ],
+    "subMenus": [
+        {
+			"activeMenu": "basic",
+			"backIcon": "arrowIcon",
+			"menuTitle": "Basic",
+			"menuLinks": [
+				{
+					"title": "Line Graph",
+					"icon": "lineIcon",
+					"link": "/"
+				}
+			]
+		},
+        {
+			"activeMenu": "3d",
+			"backIcon": "arrowIcon",
+			"menuTitle": "3D",
+			"menuLinks": [
+				{
+					"title": "Switch Graph",
+					"icon": "switchIcon",
+					"link": "/switch-graph"
+				},
+				{
+					"title": "Surface Plot Graph",
+					"icon": "mountainIcon",
+					"link": "/surface-plot"
+				}
+			]
+		},
+        {
+			"activeMenu": "maps",
+			"backIcon": "arrowIcon",
+			"menuTitle": "Maps",
+			"menuLinks": [
+				{
+					"title": "GDP Choropleth",
+					"icon": "globalisation",
+					"link": "/gapminder-map"
+				}
+			]
+		}
+    ]
 }

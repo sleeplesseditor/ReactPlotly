@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { PrimaryMenu, SecondaryMenu, useOutsideAlerter } from './MenuHelpers';
+import { MenuStructure, SecondaryMenu, useOutsideAlerter } from './MenuHelpers';
 import './Menu.scss';
 
 import MainMenuData from './Data/main-menu.json';
-import SubMenuData3D from './Data/sub-menu-3d.json';
-import SubMenuBasic from './Data/sub-menu-basic.json';
-import SubMenuMaps from './Data/sub-menu-maps.json';
 
 function Menu({ navIcon, title }) {
   const [open, setOpen] = useState(false);
@@ -49,30 +46,13 @@ function Menu({ navIcon, title }) {
   
     return (
       <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
-        <PrimaryMenu
+        <MenuStructure
+          activeMenu={activeMenu}
           activeMenuProp={activeMenu === 'main'}
           calcHeight={calcHeight}
           menuData={MainMenuData}
           setActiveMenu={setActiveMenu}
         /> 
-        <SecondaryMenu
-          activeMenuProp={activeMenu === 'basic'}
-          calcHeight={calcHeight}
-          menuData={SubMenuBasic}
-          setActiveMenu={setActiveMenu}
-        />
-        <SecondaryMenu
-          activeMenuProp={activeMenu === '3d'}
-          calcHeight={calcHeight}
-          menuData={SubMenuData3D}
-          setActiveMenu={setActiveMenu}
-        />
-        <SecondaryMenu
-          activeMenuProp={activeMenu === 'maps'}
-          calcHeight={calcHeight}
-          menuData={SubMenuMaps}
-          setActiveMenu={setActiveMenu}
-        />
       </div>
     );
   }

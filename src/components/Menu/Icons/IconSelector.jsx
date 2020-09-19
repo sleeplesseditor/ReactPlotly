@@ -1,6 +1,4 @@
 import React from 'react';
-import { IconNames } from './iconNames';
-
 import { ReactComponent as ArrowIcon } from './arrow.svg';
 import { ReactComponent as BasicIcon } from './basic.svg';
 import { ReactComponent as CubeIcon } from './cube.svg';
@@ -11,6 +9,17 @@ import { ReactComponent as MapIcon } from './mapIcon.svg';
 import { ReactComponent as MountainIcon } from './mountains.svg';
 import { ReactComponent as SwitchIcon } from './switch.svg';
 
+const IconNames = {
+    arrowIcon: 'arrowIcon',
+    basicIcon: 'basicIcon',
+    cubeIcon: 'cubeIcon',
+    globalisation: 'globalisation',
+    globeIcon: 'globeIcon',
+    lineIcon: 'lineIcon',
+    mapIcon: 'mapIcon',
+    mountainIcon: 'mountainIcon',
+    switchIcon: 'switchIcon',
+}
 
 const getIcon = (icon) => {
     switch (icon) {
