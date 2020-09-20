@@ -9,42 +9,22 @@ import { ReactComponent as MapIcon } from './mapIcon.svg';
 import { ReactComponent as MountainIcon } from './mountains.svg';
 import { ReactComponent as SwitchIcon } from './switch.svg';
 
-const IconNames = {
-    arrowIcon: 'arrowIcon',
-    basicIcon: 'basicIcon',
-    cubeIcon: 'cubeIcon',
-    globalisation: 'globalisation',
-    globeIcon: 'globeIcon',
-    lineIcon: 'lineIcon',
-    mapIcon: 'mapIcon',
-    mountainIcon: 'mountainIcon',
-    switchIcon: 'switchIcon',
-}
-
 const getIcon = (icon) => {
-    switch (icon) {
-        case IconNames.arrowIcon:
-            return <ArrowIcon/>;
-        case IconNames.basicIcon:
-            return <BasicIcon/>;
-        case IconNames.cubeIcon:
-            return <CubeIcon/>;
-        case IconNames.globalisation:
-            return <GlobalisationIcon/>;
-        case IconNames.globeIcon:
-            return <GlobeIcon/>;
-        case IconNames.lineIcon:
-            return <LineIcon/>;
-        case IconNames.mapIcon:
-            return <MapIcon/>;
-        case IconNames.mountainIcon:
-            return <MountainIcon/>;
-        case IconNames.switchIcon:
-            return <SwitchIcon/>;
-        default:
-            break;
+    const iconSelection = {
+        arrowIcon: () => <ArrowIcon/>,
+        basicIcon: () => <BasicIcon/>,
+        cubeIcon: () => <CubeIcon/>,
+        globalisation: () => <GlobalisationIcon/>,
+        globeIcon: () => <GlobeIcon/>,
+        lineIcon: () => <LineIcon/>,
+        mapIcon: () => <MapIcon/>,
+        mountainIcon: () => <MountainIcon/>,
+        switchIcon: () => <SwitchIcon/>,
+        default: () => null
     }
-};
+
+    return (iconSelection[icon] || iconSelection.default)()
+}
 
 export const IconSelector = (icon) => {
     const iconClass = getIcon(icon);
