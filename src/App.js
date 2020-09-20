@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LazyLoader from './components/LazyLoader/LazyLoader';
+import ErrorBoundary from './pages/ErrorBoundary';
 import './App.scss';
 import Menu from './components/Menu/Menu';
 import { ReactComponent as CaretIcon } from './components/Menu/Icons/caret.svg';
@@ -14,12 +15,14 @@ function App() {
   return (
     <Router>
       <Menu navIcon={<CaretIcon />} title={'React Plotly'} />
-      <Switch>
-        <Route exact path="/" component={LazyLoader(LinePage)} />
-        <Route exact path="/switch-graph" component={LazyLoader(SwitchGraphPage)} />
-        <Route exact path="/surface-plot" component={LazyLoader(SurfacePlotPage)} />
-        <Route exact path="/gapminder-map" component={LazyLoader(GDPChoroplethMapPage)} />
-      </Switch>
+      <ErrorBoundary>
+        <Switch>
+          <Route exact path="/" component={LazyLoader(LinePage)} />
+          <Route exact path="/switch-graph" component={LazyLoader(SwitchGraphPage)} />
+          <Route exact path="/surface-plot" component={LazyLoader(SurfacePlotPage)} />
+          <Route exact path="/gapminder-map" component={LazyLoader(GDPChoroplethMapPage)} />
+        </Switch>
+      </ErrorBoundary>
     </Router>
   );
 }
