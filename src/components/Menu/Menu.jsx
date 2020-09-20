@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MenuStructure, SecondaryMenu, useOutsideAlerter } from './MenuHelpers';
+import { MenuStructure, useOutsideAlerter } from './MenuHelpers';
 import './Menu.scss';
 
 import MainMenuData from './Data/main-menu.json';

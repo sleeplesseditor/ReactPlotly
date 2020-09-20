@@ -46,7 +46,8 @@ const MenuStructure = ({
             >
                 <div className="menu">
                     {menuTitles.map(link => (
-                        <DropdownItem 
+                        <DropdownItem
+                            key={link.link}
                             leftIcon={IconSelector(link.icon)} 
                             setActiveMenu={setActiveMenu} 
                             goToMenu={link.link}
@@ -58,29 +59,32 @@ const MenuStructure = ({
             </CSSTransition>
             {subMenus.map(submenu => (
                 <CSSTransition
-                in={activeMenu === `${submenu.activeMenu}`}
-                timeout={500}
-                classNames="menu-secondary"
-                unmountOnExit
-                onEnter={calcHeight}
-            >
-                <div className="menu">
-                    <DropdownItem 
-                        goToMenu="main" 
-                        leftIcon={IconSelector(submenu.backIcon)} 
-                        setActiveMenu={setActiveMenu} 
-                    >
-                        <h3>{submenu.menuTitle}</h3>
-                    </DropdownItem>
-                    {submenu.menuLinks.map(link => (
+                    in={activeMenu === `${submenu.activeMenu}`}
+                    key={submenu.activeMenu}
+                    timeout={500}
+                    classNames="menu-secondary"
+                    unmountOnExit
+                    onEnter={calcHeight}
+                >
+                    <div className="sub-menu">
                         <DropdownItem 
-                            leftIcon={IconSelector(link.icon)} 
-                            subMenu={link.link}
+                            goToMenu="main" 
+                            leftIcon={IconSelector(submenu.backIcon)} 
+                            setActiveMenu={setActiveMenu} 
                         >
-                            {link.title}
+                            <h3>{submenu.menuTitle}</h3>
                         </DropdownItem>
-                    ))}
-                </div>
+                        {submenu.menuLinks.map(link => (
+                            <DropdownItem
+                                className="sub-menu-item"
+                                key={link.link}
+                                leftIcon={IconSelector(link.icon)} 
+                                subMenu={link.link}
+                            >
+                                {link.title}
+                            </DropdownItem>
+                        ))}
+                    </div>
                 </CSSTransition>
             ))}
             </>
