@@ -1,5 +1,5 @@
 import React from 'react';
-import './SurfacePlotPage.scss';
+import '../page.scss';
 import SurfacePlot from '../../components/Graphs/ThreeDimensional/SurfacePlot';
 
 const SurfacePlotPage = () => {

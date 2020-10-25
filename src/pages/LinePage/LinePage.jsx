@@ -1,5 +1,5 @@
 import React from 'react';
-import './LinePage.scss';
+import '../page.scss';
 import BasicLineGraph from '../../components/Graphs/Basic/BasicLineGraph';
 
 const LinePage = () => {

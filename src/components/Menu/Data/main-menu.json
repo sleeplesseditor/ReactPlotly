@@ -26,6 +26,11 @@
 					"title": "Line Graph",
 					"icon": "lineIcon",
 					"link": "/"
+				},
+				{
+					"title": "Pie Chart",
+					"icon": "pieIcon",
+					"link": "/pie-chart"
 				}
 			]
 		},

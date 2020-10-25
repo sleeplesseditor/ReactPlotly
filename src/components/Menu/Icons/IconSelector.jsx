@@ -7,6 +7,7 @@ import { ReactComponent as GlobeIcon } from './globeIcon.svg';
 import { ReactComponent as LineIcon } from './lineGraph.svg';
 import { ReactComponent as MapIcon } from './mapIcon.svg';
 import { ReactComponent as MountainIcon } from './mountains.svg';
+import { ReactComponent as PieIcon } from './pieIcon.svg';
 import { ReactComponent as SwitchIcon } from './switch.svg';
 
 const getIcon = (icon) => {
@@ -19,6 +20,7 @@ const getIcon = (icon) => {
         lineIcon: () => <LineIcon/>,
         mapIcon: () => <MapIcon/>,
         mountainIcon: () => <MountainIcon/>,
+        pieIcon: () => <PieIcon/>,
         switchIcon: () => <SwitchIcon/>,
         default: () => null
     }

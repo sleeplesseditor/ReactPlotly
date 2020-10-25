@@ -1,6 +1,6 @@
 import React from 'react';
 import GDPChoroplethMap from '../../components/Graphs/Maps/GDPChoroplethMap';
-import './GDPChoroplethMap.scss';
+import '../page.scss';
 
 const GDPChoroplethMapPage = () => {
     return (

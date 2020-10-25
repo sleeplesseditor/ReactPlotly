@@ -1,5 +1,5 @@
 import React from 'react';
-import './SwitchGraphPage.scss';
+import '../page.scss';
 import SwitchGraph from '../../components/Graphs/ThreeDimensional/SwitchGraph';
 
 const SwitchGraphPage = () => {
