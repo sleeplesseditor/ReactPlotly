@@ -6,6 +6,11 @@
 			"link": "basic"
 		},
 		{
+			"title": "Dynamic",
+			"icon": "dynamicIcon",
+			"link": "dynamic"
+		},
+		{
 			"title": "3D",
 			"icon": "cubeIcon",
 			"link": "3d"
@@ -31,6 +36,18 @@
 					"title": "Pie Chart",
 					"icon": "pieIcon",
 					"link": "/pie-chart"
+				}
+			]
+		},
+		{
+			"activeMenu": "dynamic",
+			"backIcon": "arrowIcon",
+			"menuTitle": "Dynamic",
+			"menuLinks": [
+				{
+					"title": "Dynamic Stock Market Graph",
+					"icon": "stockIcon",
+					"link": "/dynamic-line"
 				}
 			]
 		},
