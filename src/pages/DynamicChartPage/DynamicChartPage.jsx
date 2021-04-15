@@ -46,6 +46,7 @@ const DynamicChartPage = ({ financialItem: {financialItem }, getFinancialItem })
 
     return (
         <div className='page-container'>
+            <h1>Conditional Render</h1>
             <div>
                 {financialItem ? displayPlot() : null }
             </div>

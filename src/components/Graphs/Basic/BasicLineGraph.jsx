@@ -37,8 +37,8 @@ const BasicLine = () => {
     }
 
     useEffect(() => {
-        setInterval(increaseGraphic, 1000);
-    }, []);
+        setInterval(increaseGraphic, 5000);
+    });
 
     return (
         <div>

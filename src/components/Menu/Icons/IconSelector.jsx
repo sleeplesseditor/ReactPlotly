@@ -17,14 +17,14 @@ const getIcon = (icon) => {
         arrowIcon: () => <ArrowIcon/>,
         basicIcon: () => <BasicIcon/>,
         cubeIcon: () => <CubeIcon/>,
-        dynamic: () => <DynamicIcon/>,
+        dynamicIcon: () => <DynamicIcon/>,
         globalisation: () => <GlobalisationIcon/>,
         globeIcon: () => <GlobeIcon/>,
         lineIcon: () => <LineIcon/>,
         mapIcon: () => <MapIcon/>,
         mountainIcon: () => <MountainIcon/>,
         pieIcon: () => <PieIcon/>,
-        stock: () => <StockIcon/>,
+        stockIcon: () => <StockIcon/>,
         switchIcon: () => <SwitchIcon/>,
         default: () => null
     }
