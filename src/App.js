@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LazyLoader from './components/LazyLoader/LazyLoader';
 import ErrorBoundary from './pages/ErrorBoundary';
 import './App.scss';
@@ -13,6 +13,7 @@ const PieChartPage = React.lazy(() => import('./pages/PieChartPage/PieChartPage'
 const SwitchGraphPage = React.lazy(() => import('./pages/SwitchGraphPage/SwitchGraphPage'));
 const SurfacePlotPage = React.lazy(() => import('./pages/SurfacePlotPage/SurfacePlotPage'));
 const GDPChoroplethMapPage = React.lazy(() => import('./pages/GDPChoroplethMapPage/GDPChoroplethMapPage'));
+const DynamicChartPage = React.lazy(() => import('./pages/DynamicChartPage/DynamicChartPage'));
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
             <Route exact path="/switch-graph" component={LazyLoader(SwitchGraphPage)} />
             <Route exact path="/surface-plot" component={LazyLoader(SurfacePlotPage)} />
             <Route exact path="/gapminder-map" component={LazyLoader(GDPChoroplethMapPage)} />
+            <Route exact path="/conditional-render" component={LazyLoader(DynamicChartPage)} />
           </Switch>
         </ErrorBoundary>
-        <Redirect to="/"/>
       </Router>
     </Provider>
   );

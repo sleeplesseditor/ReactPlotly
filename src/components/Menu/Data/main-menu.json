@@ -45,9 +45,9 @@
 			"menuTitle": "Dynamic",
 			"menuLinks": [
 				{
-					"title": "Dynamic Stock Market Graph",
+					"title": "Conditional Render",
 					"icon": "stockIcon",
-					"link": "/dynamic-line"
+					"link": "/conditional-render"
 				}
 			]
 		},
